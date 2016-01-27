@@ -1,5 +1,5 @@
 <search>
-  <input class="serchbox" type="text" onkeyup="{search}" value="{value}" placeholder="Searche..." autofocus />
+  <input class="serchbox" type="text" onkeyup="{search}" value="{value}" placeholder="Search..." autofocus />
 
   <ul class="word-list">
     <li each="{words}" class="word-list__item" style="border-left-color:{lang.color}">
