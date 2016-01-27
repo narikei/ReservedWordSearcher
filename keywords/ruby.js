@@ -1,4 +1,4 @@
-[
+window.RWS.keywords.ruby = [
   "BEGIN",
   "class",
   "ensure",
@@ -22,7 +22,7 @@
   "if",
   "redo",
   "true",
-  "__LINE__"
+  "__LINE__",
   "begin",
   "else",
   " in",

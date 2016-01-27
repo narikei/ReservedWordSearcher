@@ -1,4 +1,4 @@
-[
+window.RWS.keywords.go = [
   "break",
   "default",
   "func",

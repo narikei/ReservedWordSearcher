@@ -1,4 +1,4 @@
-[
+window.RWS.keywords.mysql = [
   "ACCESSIBLE",
   "ADD",
   "ALL",

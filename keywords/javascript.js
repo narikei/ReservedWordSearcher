@@ -1,4 +1,4 @@
-[
+window.RWS.keywords.javascript = [
   "break",
   "case",
   "catch",

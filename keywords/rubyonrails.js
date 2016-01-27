@@ -1,4 +1,4 @@
-[
+window.RWS.keywords.rubyonrails = [
   "ADDITIONAL_LOAD_PATHS",
   "ARGF",
   "ARGV",
@@ -165,8 +165,8 @@
   "Url",
   "VERSION",
   "Verbose",
-  "YAML"
-  "ZeroDivisionError"
+  "YAML",
+  "ZeroDivisionError",
   "@base_path",
   "accept",
   "Acces",
@@ -206,23 +206,23 @@
   "test",
   "timeout",
   "to_s",
-  "type"
+  "type",
   "URI",
   "visits",
   "Observer",
-  "created_at"
-  "created_on"
-  "updated_at"
-  "updated_on"
-  "lock_version"
-  "type"
-  "id"
-  "#{table_name}_count"
-  "position"
-  "parent_id"
-  "lft"
-  "rgt"
-  "quote_value"
+  "created_at",
+  "created_on",
+  "updated_at",
+  "updated_on",
+  "lock_version",
+  "type",
+  "id",
+  "#{table_name}_count",
+  "position",
+  "parent_id",
+  "lft",
+  "rgt",
+  "quote_value",
   "alias",
   "and",
   "BEGIN",
@@ -237,9 +237,9 @@
   "elsif",
   "END",
   "end",
-  "ensure"
+  "ensure",
   "false",
-  "for"
+  "for",
   "if",
   "module",
   "next",

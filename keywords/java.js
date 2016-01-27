@@ -1,4 +1,4 @@
-[
+window.RWS.keywords.java = [
   "abstract",
   "assert",
   "boolean",
