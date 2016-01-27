@@ -2,10 +2,78 @@
 <html>
   <head>
     <meta charset='utf-8'>
-    <title>Reservedwordsearcher</title>
+    <title>Reserved Word Searcher</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
   </head>
 
   <body>
-    Reservedwordsearcher
+    <div class="wrapper">
+      <h1 class="headline">Reserved Word Searcher</h1>
+      <list></list>
+      <search></search>
+    </div>
+
+    <script>
+    </script>
+    <script type="riot/tag" src="templates/search.tag"></script>
+    <script type="riot/tag" src="templates/list.tag"></script>
+    <script src="https://cdn.rawgit.com/riot/riot/master/riot+compiler.min.js"></script>
+    <script>
+      window.RWS = {}
+      window.RWS.keywords = {}
+      window.RWS.languages = [
+        {
+          name: "Go",
+          key: "go",
+          color: "#375eab",
+          textColor: "#fff",
+          active: false,
+        },
+        {
+          name: "Java",
+          key: "java",
+          color: "#b07219",
+          textColor: "#fff",
+          active: true,
+        },
+        {
+          name: "JavaScript",
+          key: "javascript",
+          color: "#f1e05a",
+          textColor: "#333",
+          active: true,
+        },
+        {
+          name: "MySQL",
+          key: "mysql",
+          color: "#5382a3",
+          textColor: "#fff",
+          active: true,
+        },
+        {
+          name: "Ruby",
+          key: "ruby",
+          color: "#701516",
+          textColor: "#fff",
+          active: true,
+        },
+        {
+          name: "Ruby on Rails",
+          key: "rubyonrails",
+          color: "#cc0000",
+          textColor: "#fff",
+          active: true,
+        },
+      ]
+
+      for (i in window.RWS.languages) {
+        var s = document.createElement("script")
+        s.type = "text/javascript"
+        s.src = "keywords/" + window.RWS.languages[i].key + ".js"
+        document.body.appendChild(s);
+      }
+
+      riot.mount("*")
+    </script>
   </body>
 </html>
