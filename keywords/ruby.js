@@ -25,7 +25,7 @@ window.RWS.keywords.ruby = [
   "__LINE__",
   "begin",
   "else",
-  " in",
+  "in",
   "rescue",
   "undef",
   "__FILE__",
