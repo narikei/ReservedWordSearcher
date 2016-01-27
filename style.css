@@ -8,6 +8,11 @@ html, body {
   text-rendering: optimizeLegibility;
 }
 
+ul, li {
+  margin: 0;
+  padding: 0;
+}
+
 .wrapper {
 	width: 900px;
 	margin: 20px auto;
