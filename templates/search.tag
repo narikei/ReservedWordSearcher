@@ -17,6 +17,9 @@
     }
 
     function searchWord(value) {
+      if (2 > value.length) {
+        return
+      }
       value = value.toLowerCase()
 
       self.words = []
@@ -50,6 +53,6 @@
       	if (a.word > b.word) { return 1 }
       	return 0
       })
-    }    
+    }
   </script>
 </search>
