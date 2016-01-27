@@ -7,3 +7,69 @@ html, body {
   font-family: 'Raleway';
   text-rendering: optimizeLegibility;
 }
+
+.wrapper {
+	width: 900px;
+	margin: 20px auto;
+  padding: 40px;
+	background-color: #fff;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.headline {
+  text-align: center;
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #333;
+}
+
+
+.language-list {
+  list-style: none;
+  text-align: center;
+}
+
+.language-list__item {
+  display: inline-block;
+  margin: .5ex .5em;
+  padding: 1ex 1em;
+  border-radius: 4px;
+  font-weight: bold;
+  opacity: .3;
+  cursor: pointer;
+}
+
+.language-list__item.is-active {
+  opacity: 1;
+  box-shadow: 1px 1px 2px rgba(0,0,0,.5)
+}
+
+.serchbox {
+  margin: 1em auto;
+  display: block;
+  width: 80%;
+  padding: 0 1em;
+  line-height: 2;
+  font-size: 2rem;
+}
+
+.word-list {
+  list-style: none;
+}
+
+.word-list__item {
+  margin: 1em 0;
+  border: 1px solid #ddd;
+  border-left: 1em solid;
+  padding: 10px 1em;
+  line-height: 1.4;
+}
+
+.word-list__item__lang {
+  color: #666;
+}
+
+.word-list__item__word {
+  font-weight: bold;
+  font-size: 1.5em;
+}

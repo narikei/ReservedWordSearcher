@@ -1,10 +1,10 @@
 <search>
-  <input type="text" onkeyup="{search}" />
+  <input class="serchbox" type="text" onkeyup="{search}" placeholder="Searche..." autofocus />
 
-  <ul class="word_list">
-    <li each="{words}" class="word_item">
-      {lang.name}:
-      {word}
+  <ul class="word-list">
+    <li each="{words}" class="word-list__item" style="border-left-color:{lang.color}">
+      <div class="word-list__item__lang">{lang.name}</div>
+      <div class="word-list__item__word">{word}</div>
     </li>
   </ul>
 
@@ -13,10 +13,11 @@
     self.words = []
 
     self.search = function(e) {
-      var value = e.target.value || ""
-      value = value.toLowerCase()
+      searchWord(e.target.value)
+    }
 
-      console.log(value)
+    function searchWord(value) {
+      value = value.toLowerCase()
 
       self.words = []
 
@@ -49,6 +50,6 @@
       	if (a.word > b.word) { return 1 }
       	return 0
       })
-    }
+    }    
   </script>
 </search>
