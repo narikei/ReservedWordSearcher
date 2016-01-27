@@ -1,5 +1,5 @@
 <search>
-  <input class="serchbox" type="text" onkeyup="{search}" placeholder="Searche..." autofocus />
+  <input class="serchbox" type="text" onkeyup="{search}" value="{value}" placeholder="Searche..." autofocus />
 
   <ul class="word-list">
     <li each="{words}" class="word-list__item" style="border-left-color:{lang.color}">
@@ -11,6 +11,7 @@
   <script>
     var self = this
     self.words = []
+    self.value = ""
 
     self.search = function(e) {
       searchWord(e.target.value)
@@ -21,14 +22,15 @@
         return
       }
       value = value.toLowerCase()
+      window.history.replaceState('','',"?w="+value);
 
       self.words = []
 
-      for (i in window.RWS.languages) {
+      for (var i in window.RWS.languages) {
         var language = window.RWS.languages[i]
         if (language.active) {
           var keywords = window.RWS.keywords[language.key]
-          for (j in keywords) {
+          for (var j in keywords) {
             var word = keywords[j]
             var indexOf = word.toLowerCase().indexOf(value)
             if (indexOf > -1) {
@@ -53,6 +55,16 @@
       	if (a.word > b.word) { return 1 }
       	return 0
       })
+    }
+
+    if (location.search && location.search.indexOf("?w=") === 0) {
+      var query = location.search.substring(3)
+      var params = query.split('&')
+      if(params[0]) {
+        self.value = params[0]
+        searchWord(self.value)
+        self.update()
+      }
     }
   </script>
 </search>

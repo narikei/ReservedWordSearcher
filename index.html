@@ -73,14 +73,16 @@
         },
       ]
 
-      for (i in window.RWS.languages) {
+      for (var i in window.RWS.languages) {
         var s = document.createElement("script")
         s.type = "text/javascript"
         s.src = "keywords/" + window.RWS.languages[i].key + ".js"
         document.body.appendChild(s);
       }
 
-      riot.mount("*")
+      window.addEventListener("load", function() {
+        riot.mount("*")
+      })
     </script>
   </body>
 </html>
