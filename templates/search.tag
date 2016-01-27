@@ -18,7 +18,7 @@
     }
 
     function searchWord(value) {
-      if (2 > value.length) {
+      if (1 > value.length) {
         return
       }
       value = value.toLowerCase()
@@ -31,6 +31,9 @@
         if (language.active) {
           var keywords = window.RWS.keywords[language.key]
           for (var j in keywords) {
+            if (self.words.length >= 50) {
+              break;
+            }
             var word = keywords[j]
             var indexOf = word.toLowerCase().indexOf(value)
             if (indexOf > -1) {
